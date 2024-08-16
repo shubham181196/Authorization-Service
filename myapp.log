@@ -2012,3 +2012,32 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jw
 2024-08-16T19:15:43.506+05:30  INFO 8336 --- [AuthorizationService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-08-16T19:15:43.511+05:30  INFO 8336 --- [AuthorizationService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-08-16T19:15:43.522+05:30  INFO 8336 --- [AuthorizationService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-16T19:47:50.336+05:30  INFO 20616 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : Starting AuthorizationServiceApplication using Java 21.0.1 with PID 20616 (D:\downloads\JAVA\AuthProjects\AuthorizationService\target\classes started by SHUBHAM in D:\downloads\JAVA\AuthProjects\AuthorizationService)
+2024-08-16T19:47:50.436+05:30  INFO 20616 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-16T19:47:50.530+05:30  INFO 20616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-16T19:47:50.530+05:30  INFO 20616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-16T19:47:51.598+05:30  INFO 20616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-16T19:47:51.669+05:30  INFO 20616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2024-08-16T19:47:53.867+05:30  INFO 20616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-16T19:47:53.900+05:30  INFO 20616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-16T19:47:53.901+05:30  INFO 20616 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-16T19:47:53.974+05:30  INFO 20616 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-16T19:47:53.974+05:30  INFO 20616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3413 ms
+2024-08-16T19:47:54.149+05:30  INFO 20616 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-16T19:47:54.225+05:30  INFO 20616 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-16T19:47:54.287+05:30  INFO 20616 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-16T19:47:54.903+05:30  INFO 20616 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-16T19:47:54.960+05:30  INFO 20616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-16T19:47:56.666+05:30  INFO 20616 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3faf031d
+2024-08-16T19:47:56.668+05:30  INFO 20616 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-16T19:47:58.298+05:30  INFO 20616 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-16T19:47:58.495+05:30  INFO 20616 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-16T19:47:59.141+05:30  INFO 20616 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-08-16T19:47:59.142+05:30  WARN 20616 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-16T19:47:59.297+05:30  WARN 20616 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-16T19:48:00.002+05:30  INFO 20616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-16T19:48:00.055+05:30  INFO 20616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-16T19:48:00.065+05:30  INFO 20616 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : Started AuthorizationServiceApplication in 10.374 seconds (process running for 12.919)
+2024-08-16T19:48:07.011+05:30  INFO 20616 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-16T19:48:07.021+05:30  INFO 20616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-16T19:48:07.141+05:30  INFO 20616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
