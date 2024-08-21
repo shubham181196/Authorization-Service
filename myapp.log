@@ -1,181 +1,24 @@
-2024-08-17T12:06:01.614+05:30  INFO 7452 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : Starting AuthorizationServiceApplication using Java 21.0.1 with PID 7452 (D:\downloads\JAVA\AuthProjects\AuthorizationService\target\classes started by SHUBHAM in D:\downloads\JAVA\AuthProjects\AuthorizationService)
-2024-08-17T12:06:01.645+05:30  INFO 7452 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-08-17T12:06:01.762+05:30  INFO 7452 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-17T12:06:01.762+05:30  INFO 7452 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-17T12:06:03.913+05:30  INFO 7452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-17T12:06:03.991+05:30  INFO 7452 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
-2024-08-17T12:06:05.247+05:30  INFO 7452 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-17T12:06:05.268+05:30  INFO 7452 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-17T12:06:05.268+05:30  INFO 7452 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-17T12:06:05.332+05:30  INFO 7452 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-17T12:06:05.332+05:30  INFO 7452 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3565 ms
-2024-08-17T12:06:05.537+05:30  INFO 7452 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-17T12:06:05.617+05:30  INFO 7452 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-17T12:06:05.662+05:30  INFO 7452 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-17T12:06:06.035+05:30  INFO 7452 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-17T12:06:06.075+05:30  INFO 7452 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-17T12:06:10.327+05:30  INFO 7452 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d9b207f
-2024-08-17T12:06:10.328+05:30  INFO 7452 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-17T12:06:12.282+05:30  INFO 7452 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-17T12:06:14.294+05:30  INFO 7452 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-17T12:06:14.939+05:30  INFO 7452 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-08-17T12:06:14.940+05:30  WARN 7452 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-08-17T12:06:15.086+05:30  WARN 7452 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-17T12:06:16.458+05:30  INFO 7452 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-08-17T12:06:16.512+05:30  INFO 7452 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-17T12:06:16.524+05:30  INFO 7452 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : Started AuthorizationServiceApplication in 15.653 seconds (process running for 18.923)
-2024-08-17T12:06:49.701+05:30  INFO 7452 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-17T12:06:49.702+05:30  INFO 7452 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-17T12:06:49.703+05:30  INFO 7452 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-08-17T12:07:50.935+05:30  INFO 7452 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-17T12:07:50.939+05:30  INFO 7452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-17T12:07:51.057+05:30  INFO 7452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-17T18:46:59.357+05:30  INFO 6124 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : Starting AuthorizationServiceApplication using Java 21.0.1 with PID 6124 (D:\downloads\JAVA\AuthProjects\AuthorizationService\target\classes started by SHUBHAM in D:\downloads\JAVA\AuthProjects\AuthorizationService)
-2024-08-17T18:46:59.382+05:30  INFO 6124 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-08-17T18:46:59.468+05:30  INFO 6124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-17T18:46:59.468+05:30  INFO 6124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-17T18:47:02.299+05:30  INFO 6124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-17T18:47:02.368+05:30  INFO 6124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
-2024-08-17T18:47:03.802+05:30  INFO 6124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-17T18:47:03.835+05:30  INFO 6124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-17T18:47:03.836+05:30  INFO 6124 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-17T18:47:03.956+05:30  INFO 6124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-17T18:47:03.957+05:30  INFO 6124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4488 ms
-2024-08-17T18:47:04.190+05:30  INFO 6124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-17T18:47:04.267+05:30  INFO 6124 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-17T18:47:04.307+05:30  INFO 6124 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-17T18:47:04.842+05:30  INFO 6124 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-17T18:47:04.872+05:30  INFO 6124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-17T18:47:07.276+05:30  INFO 6124 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@233caaee
-2024-08-17T18:47:07.282+05:30  INFO 6124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-17T18:47:08.466+05:30  INFO 6124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-17T18:47:08.878+05:30  INFO 6124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-17T18:47:09.466+05:30  INFO 6124 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-08-17T18:47:09.467+05:30  WARN 6124 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-08-17T18:47:09.575+05:30  WARN 6124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-17T18:47:10.129+05:30  INFO 6124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-08-17T18:47:10.166+05:30  INFO 6124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-17T18:47:10.174+05:30  INFO 6124 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : Started AuthorizationServiceApplication in 11.649 seconds (process running for 13.339)
-2024-08-17T18:47:33.190+05:30  INFO 6124 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-17T18:47:33.197+05:30  INFO 6124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-17T18:47:33.244+05:30  INFO 6124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-17T18:48:19.484+05:30  INFO 20704 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : Starting AuthorizationServiceApplication using Java 21.0.1 with PID 20704 (D:\downloads\JAVA\AuthProjects\AuthorizationService\target\classes started by SHUBHAM in D:\downloads\JAVA\AuthProjects\AuthorizationService)
-2024-08-17T18:48:19.486+05:30  INFO 20704 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-08-17T18:48:19.549+05:30  INFO 20704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-17T18:48:19.549+05:30  INFO 20704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-17T18:48:20.512+05:30  INFO 20704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-17T18:48:20.563+05:30  WARN 20704 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.TypeNotPresentException: Type com.example.CentralRepository.models.Role not present
-2024-08-17T18:48:20.575+05:30  INFO 20704 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-08-17T18:48:20.609+05:30 ERROR 20704 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.TypeNotPresentException: Type com.example.CentralRepository.models.Role not present
-	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
-	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
-	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
-	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
-	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
-	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
-	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
-	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
-	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1296) ~[na:na]
-	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:517) ~[spring-core-6.1.10.jar:6.1.10]
-	at org.springframework.core.ResolvableType.as(ResolvableType.java:465) ~[spring-core-6.1.10.jar:6.1.10]
-	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:256) ~[spring-data-commons-3.3.1.jar:3.3.1]
-	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:36) ~[spring-data-commons-3.3.1.jar:3.3.1]
-	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327) ~[spring-data-commons-3.3.1.jar:3.3.1]
-	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-3.3.1.jar:3.3.1]
-	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:77) ~[spring-data-commons-3.3.1.jar:3.3.1]
-	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:91) ~[spring-data-commons-3.3.1.jar:3.3.1]
-	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:168) ~[spring-data-commons-3.3.1.jar:3.3.1]
-	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:62) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:376) ~[spring-context-6.1.10.jar:6.1.10]
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[na:na]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:375) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:429) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.1.jar:3.3.1]
-	at com.example.AuthorizationService.AuthorizationServiceApplication.main(AuthorizationServiceApplication.java:14) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.1.jar:3.3.1]
-Caused by: java.lang.ClassNotFoundException: com.example.CentralRepository.models.Role
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
-	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:534) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:513) ~[na:na]
-	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.3.1.jar:3.3.1]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
-	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:534) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:513) ~[na:na]
-	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
-	... 39 common frames omitted
-
-2024-08-17T20:03:15.601+05:30  INFO 15652 --- [main] e.A.AuthorizationServiceApplicationTests : Starting AuthorizationServiceApplicationTests using Java 21.0.1 with PID 15652 (started by SHUBHAM in D:\downloads\JAVA\AuthProjects\AuthorizationService)
-2024-08-17T20:03:15.637+05:30  INFO 15652 --- [main] e.A.AuthorizationServiceApplicationTests : No active profile set, falling back to 1 default profile: "default"
-2024-08-17T20:03:16.769+05:30  INFO 15652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-17T20:03:16.903+05:30  INFO 15652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125 ms. Found 2 JPA repository interfaces.
-2024-08-17T20:03:17.831+05:30  INFO 15652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-17T20:03:21.373+05:30  INFO 15652 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64a1116a
-2024-08-17T20:03:21.380+05:30  INFO 15652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-17T20:03:25.911+05:30  INFO 15652 --- [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/quoradb (MySQL 8.0)
-2024-08-17T20:03:27.636+05:30  INFO 15652 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.946s)
-2024-08-17T20:03:27.744+05:30  INFO 15652 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `quoradb`: 2
-2024-08-17T20:03:27.949+05:30  INFO 15652 --- [main] o.f.core.internal.command.DbMigrate      : Schema `quoradb` is up to date. No migration necessary.
-2024-08-17T20:03:28.157+05:30  INFO 15652 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-17T20:03:28.240+05:30  INFO 15652 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-17T20:03:28.281+05:30  INFO 15652 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-17T20:03:28.998+05:30  INFO 15652 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-17T20:03:30.581+05:30  INFO 15652 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-17T20:03:31.203+05:30  INFO 15652 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-17T20:03:31.933+05:30  INFO 15652 --- [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-08-17T20:03:31.934+05:30  WARN 15652 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-08-17T20:03:32.380+05:30  WARN 15652 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-17T20:03:33.756+05:30  INFO 15652 --- [main] e.A.AuthorizationServiceApplicationTests : Started AuthorizationServiceApplicationTests in 19.804 seconds (process running for 23.222)
-2024-08-17T20:03:36.975+05:30  INFO 15652 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-17T20:03:36.977+05:30  INFO 15652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-17T20:03:37.108+05:30  INFO 15652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-17T20:06:15.063+05:30  INFO 11780 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : Starting AuthorizationServiceApplication using Java 21.0.1 with PID 11780 (D:\downloads\JAVA\AuthProjects\AuthorizationService\target\classes started by SHUBHAM in D:\downloads\JAVA\AuthProjects\AuthorizationService)
-2024-08-17T20:06:15.112+05:30  INFO 11780 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-08-17T20:06:15.163+05:30  INFO 11780 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-17T20:06:15.164+05:30  INFO 11780 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-17T20:06:17.018+05:30  INFO 11780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-17T20:06:17.258+05:30  INFO 11780 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 229 ms. Found 2 JPA repository interfaces.
-2024-08-17T20:06:18.513+05:30  INFO 11780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-17T20:06:18.528+05:30  INFO 11780 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-17T20:06:18.529+05:30  INFO 11780 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-17T20:06:18.593+05:30  INFO 11780 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-17T20:06:18.594+05:30  INFO 11780 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3429 ms
-2024-08-17T20:06:18.841+05:30  INFO 11780 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-17T20:06:18.920+05:30  INFO 11780 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-17T20:06:18.964+05:30  INFO 11780 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-17T20:06:19.789+05:30  INFO 11780 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-17T20:06:19.827+05:30  INFO 11780 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-17T20:06:26.175+05:30  INFO 11780 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12ae9646
-2024-08-17T20:06:26.180+05:30  INFO 11780 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-17T20:06:28.260+05:30  INFO 11780 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-17T20:06:28.382+05:30  INFO 11780 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-17T20:06:29.088+05:30  INFO 11780 --- [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-08-17T20:06:29.089+05:30  WARN 11780 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-08-17T20:06:29.242+05:30  WARN 11780 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-17T20:06:29.967+05:30  INFO 11780 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-08-17T20:06:30.174+05:30  INFO 11780 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-17T20:06:30.202+05:30  INFO 11780 --- [restartedMain] c.e.A.AuthorizationServiceApplication    : Started AuthorizationServiceApplication in 16.488 seconds (process running for 17.798)
-2024-08-17T20:06:41.969+05:30  INFO 11780 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-17T20:06:41.976+05:30  INFO 11780 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-17T20:06:42.015+05:30  INFO 11780 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-18T01:07:02.414+05:30  INFO 17376 --- [main] e.A.AuthorizationServiceApplicationTests : Starting AuthorizationServiceApplicationTests using Java 21.0.1 with PID 17376 (started by SHUBHAM in D:\downloads\JAVA\AuthProjects\AuthorizationService)
+2024-08-18T01:07:02.471+05:30  INFO 17376 --- [main] e.A.AuthorizationServiceApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2024-08-18T01:07:04.086+05:30  INFO 17376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-18T01:07:04.155+05:30  INFO 17376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2024-08-18T01:07:05.103+05:30  INFO 17376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-18T01:07:09.135+05:30  INFO 17376 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@539fc5d1
+2024-08-18T01:07:09.141+05:30  INFO 17376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-18T01:07:09.597+05:30  INFO 17376 --- [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/quoradb (MySQL 8.0)
+2024-08-18T01:07:10.292+05:30  INFO 17376 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.412s)
+2024-08-18T01:07:10.343+05:30  INFO 17376 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `quoradb`: 2
+2024-08-18T01:07:10.360+05:30  INFO 17376 --- [main] o.f.core.internal.command.DbMigrate      : Schema `quoradb` is up to date. No migration necessary.
+2024-08-18T01:07:10.638+05:30  INFO 17376 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-18T01:07:10.726+05:30  INFO 17376 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-18T01:07:10.786+05:30  INFO 17376 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-18T01:07:11.225+05:30  INFO 17376 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-18T01:07:12.881+05:30  INFO 17376 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-18T01:07:13.098+05:30  INFO 17376 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-18T01:07:13.691+05:30  INFO 17376 --- [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-08-18T01:07:13.694+05:30  WARN 17376 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-18T01:07:13.895+05:30  WARN 17376 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-18T01:07:14.780+05:30  INFO 17376 --- [main] e.A.AuthorizationServiceApplicationTests : Started AuthorizationServiceApplicationTests in 13.363 seconds (process running for 17.858)
+2024-08-18T01:07:16.697+05:30  INFO 17376 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-18T01:07:16.703+05:30  INFO 17376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-18T01:07:16.738+05:30  INFO 17376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
