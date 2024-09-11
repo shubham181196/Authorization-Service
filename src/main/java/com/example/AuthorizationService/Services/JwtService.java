@@ -50,6 +50,7 @@ public class JwtService  {
         return Keys.hmacShaKeyFor(SECRET.getBytes(StandardCharsets.UTF_8));
     }
     public Claims extractAllPayLoads(String token){
+
         return Jwts.parser()
                 .setSigningKey(getSignKey())
                 .build()

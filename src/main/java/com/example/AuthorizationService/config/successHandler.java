@@ -3,6 +3,7 @@ package com.example.AuthorizationService.config;
 import com.example.AuthorizationService.Services.JwtService;
 import com.example.AuthorizationService.Services.userDetailsServiceImpl;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Component;
 
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.io.IOException;
+import java.util.Date;
 
 @Component
 public class successHandler implements AuthenticationSuccessHandler {
@@ -49,6 +51,8 @@ public class successHandler implements AuthenticationSuccessHandler {
                 .build();
 
         response.setHeader(HttpHeaders.SET_COOKIE,cookie.toString());
+
        new DefaultRedirectStrategy().sendRedirect(request,response,"http://localhost:3000/login/home");
+
     }
 }

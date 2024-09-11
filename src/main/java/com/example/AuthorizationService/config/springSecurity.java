@@ -45,12 +45,11 @@ public class springSecurity implements WebMvcConfigurer{
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
             return http.csrf(csrf->csrf.disable())
-                    .cors(cors->cors.disable())
+
                     .authorizeHttpRequests(
                             authorize-> authorize
                                     .requestMatchers("/auth/**","/login/**").permitAll()
                                     .requestMatchers("/resource/**").hasRole("ADMIN")
-
                                     .anyRequest().authenticated()
                     ).exceptionHandling((exception)->
                             exception.authenticationEntryPoint(new CustomAuthenticationError())

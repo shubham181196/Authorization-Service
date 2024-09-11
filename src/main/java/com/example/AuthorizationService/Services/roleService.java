@@ -25,4 +25,8 @@ public class roleService {
         Role role=Role.builder().roletype(roleType).build();
         rolerepo.save(role);
     }
+    public void saveRole(RoleType roleType){
+        Role role =Role.builder().roletype(roleType).build();
+        rolerepo.save(role);
+    }
 }

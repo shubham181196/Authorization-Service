@@ -18,11 +18,8 @@ public class SampleFilter implements Filter {
         System.out.println(s);
         filterChain.doFilter(request,servletResponse);
         HttpServletResponse response=(HttpServletResponse) servletResponse;
-//        Cookie[] cookie=request.getCookies();
-//        System.out.println("after request");
-//        for(Cookie cookie1:cookie){
-//            System.out.println(cookie1.getName()+ " :: "+cookie1.getValue());
-//        }
+
+
 
 
     }

@@ -26,6 +26,10 @@ public class userService {
     public Users saveUser(loginRequestDTO loginrequestDTO){
         Role role1= roleService.findByRoleType(RoleType.USER);
         Set<Role> role=new HashSet<>();
+        if(role1==null){
+            roleService.saveRole(RoleType.USER);
+            role1= roleService.findByRoleType(RoleType.USER);
+        }
         role.add(role1);
         Users user=Users.builder()
                 .userName(loginrequestDTO.getEmail())
