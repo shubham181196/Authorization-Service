@@ -10,6 +10,8 @@ import com.example.AuthorizationService.Services.roleService;
 import com.example.AuthorizationService.Services.userDetailsServiceImpl;
 import com.example.AuthorizationService.Services.userService;
 import com.example.CentralRepository.models.Users;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -107,6 +109,41 @@ public class loginController {
             }
         
             return new ResponseEntity<>("invalid user credentials", HttpStatus.UNAUTHORIZED);
+
+
+    }
+
+    @GetMapping("/auth/signout")
+    public ResponseEntity<?> signout(ServletRequest req, ServletResponse res){
+        log.info("Inside signout controller");
+        HttpServletRequest request=(HttpServletRequest)req;
+        HttpServletResponse response=(HttpServletResponse) res;
+        try {
+            if(request.getCookies()!=null) {
+                for (Cookie cookie : request.getCookies()) {
+                    if (cookie.getName().equals("Jwttoken")) {
+                        cookie.setValue(null);
+                        Cookie cookie1=new Cookie("Jwttoken",null);
+                        cookie1.setHttpOnly(true);
+                        cookie1.setSecure(false);
+//                        response.addCookie(cookie1);
+                        response.addHeader("Set-Cookie", "Jwttoken=null; Path=/; HttpOnly;");
+                        log.info("User logout successful");
+                    }
+                }
+                return ResponseEntity.ok("User signed out successfully");
+            }else{
+                log.info("no cookies found");
+                return new ResponseEntity<>("cookies not found", HttpStatus.NOT_FOUND);
+            }
+
+        }  catch (AuthenticationException e) {
+            log.info("signout failed");
+            return new ResponseEntity<>("user logout failed", HttpStatus.BAD_REQUEST);
+
+        }
+
+//        return new ResponseEntity<>("user logout successfull", HttpStatus.OK);
 
 
     }

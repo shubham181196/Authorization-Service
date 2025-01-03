@@ -33,16 +33,16 @@ public class springSecurity implements WebMvcConfigurer{
     private UserDetailsService userDetailsService;
     private JwtFilter jwtFilter;
     private sampleInterceptor sampleinterceptor;
-    private successHandler successHandler;
 
-    public springSecurity(JwtFilter jwtFilter,userDetailsServiceImpl userDetailsService,sampleInterceptor sampleinterceptor,successHandler successHandler){
+
+    public springSecurity(JwtFilter jwtFilter,userDetailsServiceImpl userDetailsService,sampleInterceptor sampleinterceptor){
         this.userDetailsService=userDetailsService;
         this.jwtFilter=jwtFilter;
         this.sampleinterceptor=sampleinterceptor;
-        this.successHandler=successHandler;
+
     }
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http,successHandler successHandler) throws Exception {
 
             return http.csrf(csrf->csrf.disable())
 

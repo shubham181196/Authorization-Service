@@ -7,6 +7,7 @@ import com.example.CentralRepository.models.RoleType;
 import com.example.CentralRepository.models.Users;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -23,27 +24,34 @@ public class userService {
         this.passwordEncoder=passwordEncoder;
         this.roleService = roleService;
     }
+    @Transactional
     public Users saveUser(loginRequestDTO loginrequestDTO){
         Role role1= roleService.findByRoleType(RoleType.USER);
         Set<Role> role=new HashSet<>();
         if(role1==null){
+
             roleService.saveRole(RoleType.USER);
             role1= roleService.findByRoleType(RoleType.USER);
         }
         role.add(role1);
-        Users user=Users.builder()
-                .userName(loginrequestDTO.getEmail())
-                .emailId(loginrequestDTO.getEmail())
-                .password(passwordEncoder.encode(loginrequestDTO.getPass()))
-                .phoneNumber(loginrequestDTO.getPhone())
-                .roles(role)
-                .build();
+
+            Users user = Users.builder()
+                    .userName(loginrequestDTO.getEmail())
+                    .emailId(loginrequestDTO.getEmail())
+                    .password(passwordEncoder.encode(loginrequestDTO.getPass()))
+                    .phoneNumber(loginrequestDTO.getPhone())
+                    .roles(role)
+                    .build();
 //        Role role2=roleService.findByRoleType(RoleType.ADMIN);
 //        Set<Role> rolesetting=new HashSet<>();
 //        rolesetting.add(role2);
 //        user.setRoles(rolesetting);
-        userrepo.save(user);
-        return user;
+        System.out.println((role1.toString()));
+            userrepo.save(user);
+            return user;
+
+
+
     }
 
     public Users findUserByEmail(String Email){

@@ -1,7 +1,10 @@
 package com.example.AuthorizationService.config;
 
+import com.example.AuthorizationService.DTO.loginRequestDTO;
 import com.example.AuthorizationService.Services.JwtService;
 import com.example.AuthorizationService.Services.userDetailsServiceImpl;
+import com.example.AuthorizationService.Services.userService;
+import com.example.CentralRepository.models.Users;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,15 +25,18 @@ import java.util.Date;
 
 @Component
 public class successHandler implements AuthenticationSuccessHandler {
-    @Autowired
+
     private  JwtService jwtService;
-    @Autowired
+
     private userDetailsServiceImpl userDetailsService;
     @Value("${cookie.expiry}")
     private int cookieExpiry;
 
-    public successHandler() {
-
+    private userService userservice;
+    public successHandler(JwtService jwtService,userDetailsServiceImpl userDetailsService,userService userservice) {
+        this.userservice=userservice;
+        this.userDetailsService=userDetailsService;
+        this.jwtService=jwtService;
     }
 
     @Override
@@ -38,7 +44,15 @@ public class successHandler implements AuthenticationSuccessHandler {
         DefaultOAuth2User defaultOAuth2User= (DefaultOAuth2User) authentication.getPrincipal();
         System.out.println("principal: " +defaultOAuth2User.getAttributes().toString());
         System.out.println("DDDDDDD: " +defaultOAuth2User.getAttributes().get("email"));
-
+        Users user=userservice.findUserByEmail(defaultOAuth2User.getAttributes().get("email").toString());
+        if(user==null){
+            loginRequestDTO loginrequestDTO= loginRequestDTO.builder()
+                    .pass("123abc")
+                    .email(defaultOAuth2User.getAttributes().get("email").toString())
+                    .phone("0123456789")
+                    .build();
+            Users user1=userservice.saveUser(loginrequestDTO);
+        }
         String token=jwtService.createToken(defaultOAuth2User.getAttributes().get("email").toString());
 
 
